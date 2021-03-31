@@ -1,11 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { NewPlaces } from "./places/pages/NewPlaces";
+import { User } from "./users/pages/User";
+
 
 function App() {
   return (
-    <div className="App">
-     <h1>dsfsfdsf</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/' exact component={User} />
+        <Route path='/places/new' exact component={NewPlaces} />
+        <Redirect path='/' />
+      </Switch>
+    </Router>
   );
 }
 
