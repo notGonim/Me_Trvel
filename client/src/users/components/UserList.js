@@ -1,6 +1,6 @@
 import React from 'react'
 import { UserItem } from './UserItem'
-import './UserList.sass'
+import './UserList.scss'
 
 export const UserList = ({ items }) => {
 
