@@ -11,13 +11,11 @@ export const UserList = ({ items }) => {
     }
 
     return (
-        <>
-            <ul>
-                {items.map(user => (
-                    <UserItem key={user.id} id={user.id} image={user.image}
-                        name={user.name} placeCount={user.places} />
-                ))}
-            </ul>
-        </>
+        <ul className="users_list">
+            {items.map(user => (
+                <UserItem key={user.id} id={user.id} image={user.image}
+                    name={user.name} placeCount={user.places} />
+            ))}
+        </ul>
     )
 }
